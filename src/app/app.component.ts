@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kevin-as-a-service';
+  clicked = false;
+
+  carouselClicked() {
+    this.clicked = true;
+  }
 }

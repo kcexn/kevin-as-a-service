@@ -1,3 +1,23 @@
-<div class="container">
-    <h1>Hello!</h1>
+<div class="container-fluid bg-dark">
+    <div class="row">
+        <div class="col">
+            <div id="carouselApp" class="carousel slide">
+                <div class="carousel-item active">
+                    <app-splash></app-splash>
+                </div>
+                <div class="carousel-item">
+                    <app-form></app-form>
+                </div>
+            </div>
+            <a *ngIf="!this.clicked" 
+                class="carousel-control-next" 
+                href="#carouselApp" 
+                role="button" 
+                data-slide="next" 
+                (click)="carouselClicked()">y
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+        </div>
+    </div>
 </div>
