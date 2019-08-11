@@ -1,9 +1,12 @@
-<div class="container-fluid bg-dark">
+<div class="container-fluid">
     <div class="row">
-        <div class="col">
+        <div class="col px-0">
             <div id="carouselApp" class="carousel slide">
-                <div class="carousel-item active">
+                <div class="carousel-item active bg-primary" style="height:100vh">
                     <app-splash></app-splash>
+                    <div class="carousel-caption">
+                        <h1>Hello! How can I help?</h1>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <app-form></app-form>
@@ -11,11 +14,11 @@
             </div>
             <a *ngIf="!this.clicked" 
                 class="carousel-control-next" 
-                href="#carouselApp" 
+                href="#carouselApp" k
                 role="button" 
                 data-slide="next" 
-                (click)="carouselClicked()">y
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                (click)="carouselClicked()">
+                    <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
         </div>
