@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col px-0">
-            <div id="carouselApp" class="carousel slide">
+            <div id="carouselApp" class="carousel slide" data-interval="false">
                 <div class="carousel-item active bg-primary" style="height:100vh">
                     <app-splash></app-splash>
                 </div>
@@ -11,7 +11,7 @@
             </div>
             <a *ngIf="!this.clicked" 
                 class="carousel-control-next" 
-                href="#carouselApp" k
+                href="#carouselApp" 
                 role="button" 
                 data-slide="next" 
                 (click)="carouselClicked()">
