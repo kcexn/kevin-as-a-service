@@ -1,6 +1,7 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
+  <div class="row pt-5">
+    <div class="d-none d-md-block col-md-2"></div>
+    <div *ngIf="! isSubmitted" class="col-sm-12 col-md-8">
       <form [formGroup]='kevinForm' (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="name">Name</label>
@@ -20,8 +21,28 @@
               class="form-control"
             >
           </div>
-          <input type="submit" value="Submit" class="btn btn-primary">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea 
+              formControlName="description"
+              name="description" 
+              id="description" 
+              cols="30" 
+              rows="10" 
+              class='form-control'>
+            </textarea>
+          </div>
+          <input 
+            type="submit" 
+            value="Submit" 
+            class="btn btn-primary"
+            [disabled]="! isValid"
+            >
         </form>
     </div>
+    <div *ngIf="isSubmitted" class="col-sm-12 col-md-8">
+        <h1>Thanks!</h1>
+    </div>
+    <div class="d-none d-md-block col-md-2"></div>
   </div>
 </div>
