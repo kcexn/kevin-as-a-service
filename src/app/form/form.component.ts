@@ -23,12 +23,12 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.kevinForm.reset();
     this.postMail({
       Name: this.kevinForm.value.name,
       Email: this.kevinForm.value.email,
       Body: this.kevinForm.value.description
     });
+    this.kevinForm.reset();
   }
 
   ngOnInit() {
